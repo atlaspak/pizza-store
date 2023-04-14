@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "af6c46b0-dbdb-424c-aff0-4a0fdebcc694",
+		"name": "PizzaStoreTests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25560266"
+	},
+	"item": [
+		{
+			"name": "Get All Orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/orders",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Place Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"customerName\": \"Atlas Pak\",\n  \"pizzas\": [\n    {\n      \"name\": \"Margherita\",\n      \"basePrice\": 9.99,\n      \"toppings\": [\n        {\n          \"name\": \"Mozzarella\",\n          \"price\": 1.99\n        },\n        {\n          \"name\": \"Peppers\",\n          \"price\": 0.99\n        }\n      ]\n    },\n    {\n      \"name\": \"Large Quattro Formaggi\",\n      \"basePrice\": 9.99,\n      \"toppings\": [\n        {\n          \"name\": \"Mozzarella\",\n          \"price\": 1.49\n        },\n        {\n          \"name\": \"Gorgonzola\",\n          \"price\": 1.49\n        },\n        {\n          \"name\": \"Fontina\",\n          \"price\": 1.49\n        },\n        {\n          \"name\": \"Parmigiano-Reggiano\",\n          \"price\": 1.49\n        }\n      ]\n    }\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/orders",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Single Order",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/orders/64391ca2f45dd31b9fc1b164",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"orders",
+						"64391ca2f45dd31b9fc1b164"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Single Order",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/orders/64391ca2f45dd31b9fc1b164",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"orders",
+						"64391ca2f45dd31b9fc1b164"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Single Order",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"customerName\": \"John Doe\",\n  \"pizzas\": [\n    {\n      \"name\": \"Hawaiian\",\n      \"basePrice\": 12.99,\n      \"toppings\": [\n        {\n          \"name\": \"Ham\",\n          \"price\": 2.99\n        },\n        {\n          \"name\": \"Pineapple\",\n          \"price\": 1.49\n        }\n      ]\n    }\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/orders/64391d9f76c5f1b1e57f44cb",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"orders",
+						"64391d9f76c5f1b1e57f44cb"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
